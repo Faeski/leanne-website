@@ -1,21 +1,13 @@
 import { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/templates";
-import { PLACEHOLDER_CONTENT } from "@/content/placeholder";
-
-const content = PLACEHOLDER_CONTENT.services.icoone;
+import { icooneContent } from "@/content";
 
 export const metadata: Metadata = {
-  title: "iCoone - Huidversteviging & Body Contouring",
+  title: "iCoone Huidversteviging | Instituut Leanne",
   description:
-    "iCoone behandeling voor huidversteviging en lichaamscontouring. Niet-invasieve oplossing na zwangerschap of bij huidverslapping. Instituut Leanne Lanaken.",
+    "Niet-invasieve body contouring met iCoone. Effectief tegen cellulite, huidverslapping en voor postpartum herstel. Instituut Leanne Lanaken.",
 };
 
-export default function ICoonePage() {
-  return (
-    <ServicePageTemplate
-      title={content.title}
-      subtitle={content.subtitle}
-      aeoPlaceholder={content.aeo}
-    />
-  );
+export default function IcoonePage() {
+  return <ServicePageTemplate content={icooneContent} />;
 }

@@ -28,6 +28,10 @@ export const ROUTES = {
   // Legal
   PRIVACY: "/privacy",
   VOORWAARDEN: "/algemene-voorwaarden",
+
+  // Geo landing pages
+  HUIDVERBETERING_MAASTRICHT: "/huidverbetering-maastricht",
+  LASERONTHARING_MAASTRICHT: "/laserontharing-maastricht",
 } as const;
 
 export const EXTERNAL_URLS = {

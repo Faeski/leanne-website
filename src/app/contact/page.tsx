@@ -1,56 +1,87 @@
 import { Metadata } from "next";
-import { Section, Container, Placeholder } from "@/components/shared";
-import { PLACEHOLDER_CONTENT } from "@/content/placeholder";
-import { CONTACT_INFO, EXTERNAL_URLS } from "@/lib/constants";
-
-const content = PLACEHOLDER_CONTENT.pages.contact;
+import { Section, Container } from "@/components/shared";
+import { IntakeCTA } from "@/components/content";
+import { contactContent } from "@/content";
+import { SchemaScript, generateLocalBusinessSchema } from "@/lib/schema";
+import { EXTERNAL_URLS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact | Instituut Leanne",
   description:
     "Neem contact op met Instituut Leanne in Lanaken. Openingstijden, adres, telefoon en routebeschrijving.",
 };
 
 export default function ContactPage() {
+  const content = contactContent;
+
   return (
     <>
+      <SchemaScript
+        schema={generateLocalBusinessSchema({
+          areaServed: "Lanaken",
+          serviceTypes: ["Huidverbetering", "Laserontharing", "Body Contouring"],
+        })}
+      />
+
       {/* Hero */}
       <Section background="cream">
         <Container>
-          <Placeholder
-            type="hero"
-            title={content.title}
-            description={content.subtitle}
-            height="md"
-          />
+          <div className="mx-auto max-w-3xl text-center">
+            <h1 className="text-display-lg font-semibold text-neutral-900">
+              {content.title}
+            </h1>
+            <p className="mt-4 text-lg text-neutral-600">
+              {content.subtitle}
+            </p>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Intro */}
+      <Section>
+        <Container size="narrow">
+          <p className="text-center text-lg text-neutral-600">
+            {content.intro}
+          </p>
         </Container>
       </Section>
 
       {/* Contact Info */}
-      <Section>
+      <Section background="cream">
         <Container>
           <div className="grid gap-8 md:grid-cols-2">
             {/* Details */}
-            <div>
-              <h2 className="mb-4 text-display-sm font-semibold">
+            <div className="rounded-lg border border-neutral-200 bg-white p-6">
+              <h2 className="mb-4 text-lg font-semibold text-neutral-900">
                 Contactgegevens
               </h2>
               <address className="not-italic">
                 <p className="mb-2 text-lg font-medium text-neutral-900">
-                  {CONTACT_INFO.name}
+                  Instituut Leanne
                 </p>
-                <p className="text-neutral-600">{CONTACT_INFO.address}</p>
+                <p className="text-neutral-600">{content.contactInfo.address}</p>
                 <p className="text-neutral-600">
-                  {CONTACT_INFO.postalCode} {CONTACT_INFO.city}
+                  {content.contactInfo.postalCode} {content.contactInfo.city}
                 </p>
-                <p className="text-neutral-600">{CONTACT_INFO.country}</p>
+                <p className="text-neutral-600">{content.contactInfo.country}</p>
 
                 <p className="mt-4 text-neutral-600">
-                  <span className="font-medium">Tel:</span> {CONTACT_INFO.phone}
+                  <span className="font-medium">Tel:</span>{" "}
+                  <a
+                    href={`tel:${content.contactInfo.phone}`}
+                    className="hover:text-neutral-900"
+                  >
+                    {content.contactInfo.phone}
+                  </a>
                 </p>
                 <p className="text-neutral-600">
                   <span className="font-medium">Email:</span>{" "}
-                  {CONTACT_INFO.email}
+                  <a
+                    href={`mailto:${content.contactInfo.email}`}
+                    className="hover:text-neutral-900"
+                  >
+                    {content.contactInfo.email}
+                  </a>
                 </p>
               </address>
 
@@ -59,7 +90,7 @@ export default function ContactPage() {
                   href={EXTERNAL_URLS.GOOGLE_MAPS}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-md bg-primary-500 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-600"
+                  className="inline-flex items-center gap-2 rounded-full bg-neutral-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-neutral-800"
                 >
                   Bekijk op Google Maps
                   <svg
@@ -80,53 +111,80 @@ export default function ContactPage() {
             </div>
 
             {/* Opening Hours */}
-            <div>
-              <h2 className="mb-4 text-display-sm font-semibold">
+            <div className="rounded-lg border border-neutral-200 bg-white p-6">
+              <h2 className="mb-4 text-lg font-semibold text-neutral-900">
                 Openingstijden
               </h2>
               <dl className="space-y-2">
-                {Object.entries(CONTACT_INFO.openingHours).map(
-                  ([day, hours]) => (
-                    <div key={day} className="flex justify-between">
-                      <dt className="capitalize text-neutral-600">{day}</dt>
-                      <dd
-                        className={
-                          hours === "Gesloten"
-                            ? "text-neutral-400"
-                            : "font-medium text-neutral-900"
-                        }
-                      >
-                        {hours}
-                      </dd>
-                    </div>
-                  )
-                )}
+                {content.openingHours.map(({ day, hours }) => (
+                  <div key={day} className="flex justify-between">
+                    <dt className="text-neutral-600">{day}</dt>
+                    <dd
+                      className={
+                        hours === "Gesloten"
+                          ? "text-neutral-400"
+                          : "font-medium text-neutral-900"
+                      }
+                    >
+                      {hours}
+                    </dd>
+                  </div>
+                ))}
               </dl>
             </div>
           </div>
         </Container>
       </Section>
 
-      {/* Map */}
-      <Section background="cream">
-        <Container>
-          <Placeholder
-            type="widget"
-            title="Google Maps"
-            description="Interactieve kaart met locatie"
-            height="md"
-          />
-        </Container>
-      </Section>
-
       {/* Directions */}
       <Section>
         <Container size="narrow">
-          <Placeholder
-            type="text"
-            title="Routebeschrijving"
-            description="Bereikbaarheid vanuit Maastricht, parkeren, openbaar vervoer"
-            height="sm"
+          <h2 className="mb-4 text-center text-display-sm font-semibold">
+            Bereikbaarheid
+          </h2>
+          <p className="text-center text-neutral-600">{content.directions}</p>
+        </Container>
+      </Section>
+
+      {/* Map Placeholder */}
+      <Section background="cream">
+        <Container>
+          <div className="flex aspect-[21/9] items-center justify-center rounded-xl border-2 border-dashed border-neutral-300 bg-neutral-100">
+            <div className="text-center">
+              <svg
+                className="mx-auto h-12 w-12 text-neutral-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1}
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1}
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+              <p className="mt-2 text-neutral-500">
+                Google Maps wordt hier ingesloten
+              </p>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* CTA */}
+      <Section>
+        <Container size="narrow">
+          <IntakeCTA
+            title="Direct een afspraak maken?"
+            description="Boek online je behandeling of gratis huidanalyse."
+            ctaText="Boek nu"
           />
         </Container>
       </Section>

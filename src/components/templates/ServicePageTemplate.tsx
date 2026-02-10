@@ -1,90 +1,114 @@
 "use client";
 
-import { Section, Container, Placeholder } from "@/components/shared";
+import { Section, Container } from "@/components/shared";
 import { SalonizedWidget } from "@/components/integrations";
+import {
+  AEOBlock,
+  ProcessTimeline,
+  BeforeAfterGallery,
+  FAQAccordion,
+  IntakeCTA,
+  type ProcessStep,
+  type BeforeAfterImage,
+  type FAQItem,
+} from "@/components/content";
+import { SchemaScript, generateServiceSchema } from "@/lib/schema";
 
-interface ServicePageTemplateProps {
+export interface ServicePageContent {
+  // AEO
+  aeoAnswer: string;
+  aeoCitation?: string;
+
+  // Hero
   title: string;
   subtitle: string;
-  aeoPlaceholder: string;
+  heroImage?: string;
+
+  // Process
+  processSteps: ProcessStep[];
+
+  // Gallery
+  beforeAfterImages: BeforeAfterImage[];
+
+  // FAQ
+  faqs: FAQItem[];
+
+  // Schema
+  schemaData: {
+    name: string;
+    description: string;
+    url: string;
+    category?: string;
+    priceRange?: string;
+    duration?: string;
+  };
 }
 
-export function ServicePageTemplate({
-  title,
-  subtitle,
-  aeoPlaceholder,
-}: ServicePageTemplateProps) {
+interface ServicePageTemplateProps {
+  content: ServicePageContent;
+}
+
+export function ServicePageTemplate({ content }: ServicePageTemplateProps) {
   return (
     <>
+      {/* Schema.org structured data */}
+      <SchemaScript schema={generateServiceSchema(content.schemaData)} />
+
       {/* AEO Block - Top of page for AI search engines */}
       <Section spacing="normal">
         <Container size="narrow">
-          <Placeholder
-            type="text"
-            title="AEO Block"
-            description={aeoPlaceholder}
-            height="sm"
-          />
+          <AEOBlock answer={content.aeoAnswer} citation={content.aeoCitation} />
         </Container>
       </Section>
 
       {/* Hero */}
       <Section background="cream">
         <Container>
-          <Placeholder
-            type="hero"
-            title={title}
-            description={subtitle}
-            height="md"
-          />
+          <div className="mx-auto max-w-3xl text-center">
+            <h1 className="text-display-lg font-semibold text-neutral-900">
+              {content.title}
+            </h1>
+            <p className="mt-4 text-lg text-neutral-600">
+              {content.subtitle}
+            </p>
+          </div>
+          {content.heroImage && (
+            <div className="mt-8 aspect-[21/9] overflow-hidden rounded-xl">
+              <img
+                src={content.heroImage}
+                alt={content.title}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          )}
         </Container>
       </Section>
 
       {/* Process Timeline */}
       <Section>
         <Container>
-          <Placeholder
-            type="timeline"
-            title="Behandelproces"
-            description="Wat te verwachten: voor, tijdens en na de behandeling"
-            height="md"
-          />
+          <ProcessTimeline steps={content.processSteps} />
         </Container>
       </Section>
 
       {/* Before/After Gallery */}
       <Section background="cream">
         <Container>
-          <Placeholder
-            type="gallery"
-            title="Voor/Na Galerij"
-            description="Behandelresultaten met disclaimers"
-            height="md"
-          />
+          <BeforeAfterGallery images={content.beforeAfterImages} />
         </Container>
       </Section>
 
       {/* FAQ */}
       <Section>
         <Container size="narrow">
-          <Placeholder
-            type="faq"
-            title="Veelgestelde Vragen"
-            description="FAQ sectie met schema markup"
-            height="md"
-          />
+          <FAQAccordion items={content.faqs} />
         </Container>
       </Section>
 
       {/* Intake CTA */}
       <Section background="cream">
         <Container size="narrow">
-          <Placeholder
-            type="text"
-            title="Intake CTA"
-            description="Boek je gratis huidanalyse"
-            height="sm"
-          />
+          <IntakeCTA />
         </Container>
       </Section>
 
