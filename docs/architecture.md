@@ -15,6 +15,10 @@ This is a Next.js 16 (App Router) marketing website for Instituut Leanne, a prem
 | Hosting | Vercel (planned) | Edge deployment |
 | Analytics | GA4 | With GDPR cookie consent |
 | Booking | Salonized | Embedded widget |
+| Database | Supabase | Quiz session storage, lead management |
+| Email | Resend | Transactional emails with PDF attachments |
+| Background Jobs | Inngest | Email nurture sequence scheduling |
+| PDF Generation | @react-pdf/renderer | Personalized "Huid Advies Paspoort" |
 
 ## Directory Structure
 
@@ -37,12 +41,21 @@ src/
 │   │   ├── menopauze/           # Menopause
 │   │   ├── sporters/            # Athletes
 │   │   └── gezond-ouder-worden/ # Healthy aging
+│   ├── skin-quiz/page.tsx       # Skin Code diagnostic quiz
 │   ├── huidanalyse/page.tsx     # Free skin analysis
 │   ├── over-ons/page.tsx        # About us
 │   ├── contact/page.tsx         # Contact info
 │   ├── boeken/page.tsx          # Booking page
 │   ├── privacy/page.tsx         # Privacy policy
 │   ├── algemene-voorwaarden/    # Terms and conditions
+│   ├── api/                     # API routes
+│   │   ├── quiz/                # Quiz API endpoints
+│   │   │   ├── start/           # Create new quiz session
+│   │   │   ├── answer/          # Save quiz answers
+│   │   │   ├── complete/        # Complete quiz, trigger emails
+│   │   │   └── pdf/             # Generate PDF download
+│   │   ├── inngest/             # Inngest background job handler
+│   │   └── unsubscribe/         # Email unsubscribe endpoint
 │   ├── sitemap.ts               # Auto-generated sitemap
 │   └── robots.ts                # Robots.txt config
 │
@@ -62,17 +75,53 @@ src/
 │   │   ├── ServicePageTemplate.tsx  # For treatment pages
 │   │   └── PersonaPageTemplate.tsx  # For persona pages
 │   │
+│   ├── content/                 # Content block components
+│   │   ├── AEOBlock.tsx         # AI-optimized answer blocks
+│   │   ├── FAQAccordion.tsx     # FAQ with Schema.org
+│   │   ├── ProcessTimeline.tsx  # Before/During/After steps
+│   │   ├── TreatmentGrid.tsx    # Service preview cards
+│   │   └── ...                  # Other content blocks
+│   │
+│   ├── quiz/                    # Quiz components
+│   │   ├── Quiz.tsx             # Main quiz container
+│   │   ├── QuizProgress.tsx     # Step indicator
+│   │   ├── QuizQuestion.tsx     # Question display
+│   │   ├── QuizOption.tsx       # Selectable option card
+│   │   ├── QuizEmailCapture.tsx # Email form with consent
+│   │   ├── QuizResults.tsx      # Results + PDF download
+│   │   └── QuizStart.tsx        # Start screen
+│   │
+│   ├── pdf/                     # PDF generation
+│   │   └── QuizPDFTemplate.tsx  # @react-pdf/renderer template
+│   │
 │   └── integrations/            # Third-party integrations
 │       ├── SalonizedWidget.tsx  # Booking widget
 │       ├── CookieConsent.tsx    # GDPR consent banner
 │       └── GoogleAnalytics.tsx  # GA4 conditional loading
 │
 ├── content/
-│   └── placeholder.ts           # Placeholder content for all pages
+│   ├── services/                # Service page content
+│   ├── personas/                # Persona page content
+│   ├── pages/                   # Core page content
+│   └── quiz.ts                  # Quiz questions, recommendations, emails
 │
 ├── lib/
 │   ├── constants.ts             # Routes, navigation, contact info
-│   └── utils.ts                 # Utility functions (cn)
+│   ├── utils.ts                 # Utility functions (cn)
+│   ├── schema.tsx               # Schema.org generators
+│   ├── quiz/                    # Quiz logic
+│   │   ├── types.ts             # Quiz TypeScript interfaces
+│   │   └── recommendations.ts   # Result generation logic
+│   ├── supabase/                # Database clients
+│   │   ├── client.ts            # Browser client
+│   │   └── server.ts            # Server/admin client
+│   └── email/                   # Email system
+│       ├── client.ts            # Resend client setup
+│       └── templates.tsx        # React email templates
+│
+├── inngest/                     # Background job system
+│   ├── client.ts                # Inngest client
+│   └── functions.ts             # Email sequence functions
 │
 ├── styles/
 │   └── globals.css              # Tailwind imports + theme config
@@ -129,8 +178,26 @@ Service pages include AEO blocks at the top:
 ## Environment Variables
 
 ```env
+# Analytics
 NEXT_PUBLIC_GA_ID=          # Google Analytics 4 Measurement ID
+
+# Booking
 NEXT_PUBLIC_SALONIZED_KEY=  # Salonized widget key (if needed)
+
+# Database (Supabase)
+NEXT_PUBLIC_SUPABASE_URL=   # Supabase project URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY=  # Supabase anonymous key
+SUPABASE_SERVICE_ROLE_KEY=  # Supabase service role key (server only)
+
+# Email (Resend)
+RESEND_API_KEY=             # Resend API key for transactional emails
+
+# Background Jobs (Inngest)
+INNGEST_EVENT_KEY=          # Inngest event key
+INNGEST_SIGNING_KEY=        # Inngest signing key
+
+# Site URL
+NEXT_PUBLIC_SITE_URL=       # Production site URL for email links
 ```
 
 ## Development Phases
@@ -138,8 +205,8 @@ NEXT_PUBLIC_SALONIZED_KEY=  # Salonized widget key (if needed)
 | Phase | Status | Description |
 |-------|--------|-------------|
 | 1. Foundation | ✅ Complete | Scaffold with placeholders |
-| 2. Content | Pending | Real content blocks, schema markup |
-| 3. Quiz | Pending | Lead generation engine |
+| 2. Content | ✅ Complete | Real content blocks, schema markup |
+| 3. Quiz | ✅ Complete | Lead generation engine, PDF, email sequence |
 | 4. Polish | Pending | Interactive elements, launch |
 
 ## Running Locally
