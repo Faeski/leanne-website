@@ -8,6 +8,7 @@ import {
   BeforeAfterGallery,
   FAQAccordion,
   IntakeCTA,
+  StepUpExplainer,
   type ProcessStep,
   type BeforeAfterImage,
   type FAQItem,
@@ -42,6 +43,9 @@ export interface ServicePageContent {
     priceRange?: string;
     duration?: string;
   };
+
+  // Optional components
+  showStepUpExplainer?: boolean;
 }
 
 interface ServicePageTemplateProps {
@@ -90,6 +94,9 @@ export function ServicePageTemplate({ content }: ServicePageTemplateProps) {
           <ProcessTimeline steps={content.processSteps} />
         </Container>
       </Section>
+
+      {/* Step-Up Explainer (Environ-specific) */}
+      {content.showStepUpExplainer && <StepUpExplainer />}
 
       {/* Before/After Gallery */}
       <Section background="cream">

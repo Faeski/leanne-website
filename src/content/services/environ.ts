@@ -75,6 +75,9 @@ export const environContent: ServicePageContent = {
     },
   ],
 
+  // Optional components
+  showStepUpExplainer: true,
+
   // Schema data
   schemaData: {
     name: "Environ Anti-Aging Behandeling",

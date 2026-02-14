@@ -1,5 +1,7 @@
 "use client";
 
+import { GravityStarsBackground } from "@/components/animate-ui/backgrounds/gravity-stars";
+
 export interface ProcessStep {
   phase: "voor" | "tijdens" | "na";
   title: string;
@@ -30,14 +32,27 @@ const phaseColors = {
  */
 export function ProcessTimeline({ steps, title = "Het Behandelproces" }: ProcessTimelineProps) {
   return (
-    <div>
-      <h2 className="mb-8 text-center text-display-sm font-semibold">
+    <div className="relative py-8 overflow-hidden rounded-2xl bg-neutral-50">
+      {/* Animated star background */}
+      <GravityStarsBackground
+        className="absolute inset-0 z-0"
+        starsCount={120}
+        starsSize={3}
+        starsOpacity={0.9}
+        starsColor="#737373"
+        glowIntensity={25}
+        mouseInfluence={180}
+        mouseGravity="attract"
+        gravityStrength={120}
+      />
+
+      <h2 className="relative z-10 mb-8 text-center text-display-sm font-semibold">
         {title}
       </h2>
 
-      <div className="relative">
+      <div className="relative z-10">
         {/* Timeline line */}
-        <div className="absolute left-4 top-0 h-full w-0.5 bg-neutral-200 md:left-1/2 md:-translate-x-1/2" />
+        <div className="absolute left-4 top-0 h-full w-0.5 bg-neutral-200/50 md:left-1/2 md:-translate-x-1/2" />
 
         <div className="space-y-8">
           {steps.map((step, index) => (

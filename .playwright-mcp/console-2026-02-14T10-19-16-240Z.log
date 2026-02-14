@@ -1,0 +1,48 @@
+[    1681ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/favicon.ico:0
+[  627818ms] ReferenceError: GravityStarsBackground is not defined
+    at StepUpExplainer (http://localhost:3000/_next/static/chunks/Documents_GitHub_leanne-website_src_b79af0e6._.js?id=%255Bproject%255D%252FDocuments%252FGitHub%252Fleanne-website%252Fsrc%252Fcomponents%252Fcontent%252FStepUpExplainer.tsx+%255Bapp-client%255D+%2528ecmascript%2529:112:268)
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/77146_next_dist_compiled_react-dom_08d5eaac._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/77146_next_dist_compiled_react-dom_08d5eaac._.js:4651:24)
+    at updateFunctionComponent (http://localhost:3000/_next/static/chunks/77146_next_dist_compiled_react-dom_08d5eaac._.js:6112:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/77146_next_dist_compiled_react-dom_08d5eaac._.js:6708:24)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/77146_next_dist_compiled_react-dom_08d5eaac._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/77146_next_dist_compiled_react-dom_08d5eaac._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/77146_next_dist_compiled_react-dom_08d5eaac._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/77146_next_dist_compiled_react-dom_08d5eaac._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/77146_next_dist_compiled_react-dom_08d5eaac._.js:9105:47)
+    at performSyncWorkOnRoot (http://localhost:3000/_next/static/chunks/77146_next_dist_compiled_react-dom_08d5eaac._.js:10238:9)
+    at flushSyncWorkAcrossRoots_impl (http://localhost:3000/_next/static/chunks/77146_next_dist_compiled_react-dom_08d5eaac._.js:10154:316)
+    at flushSyncWork$1 (http://localhost:3000/_next/static/chunks/77146_next_dist_compiled_react-dom_08d5eaac._.js:9237:86)
+    at Object.scheduleRefresh (http://localhost:3000/_next/static/chunks/77146_next_dist_compiled_react-dom_08d5eaac._.js:299:13)
+    at http://localhost:3000/_next/static/chunks/77146_next_dist_compiled_31496335._.js:391:33
+    at Set.forEach (<anonymous>)
+    at Object.performReactRefresh (http://localhost:3000/_next/static/chunks/77146_next_dist_compiled_31496335._.js:384:38)
+    at applyUpdate (http://localhost:3000/_next/static/chunks/77146_next_dist_compiled_31496335._.js:878:31)
+    at http://localhost:3000/_next/static/chunks/77146_next_dist_compiled_31496335._.js:886:13
+[  635276ms] [ERROR] ./Documents/GitHub/leanne-website/src/components/content/StepUpExplainer.tsx:218:15
+Parsing ecmascript source code failed
+  216 |           </p>
+  217 |         </motion.div>
+> 218 |         </div>
+      |               ^
+> 219 |       </Container>
+      | ^^^^^^^
+  220 |     </Section>
+  221 |   );
+  222 | }
+
+Expected '</', got 'jsx text'
+
+Import traces:
+  Client Component Browser:
+    ./Documents/GitHub/leanne-website/src/components/content/StepUpExplainer.tsx [Client Component Browser]
+    ./Documents/GitHub/leanne-website/src/components/templates/ServicePageTemplate.tsx [Client Component Browser]
+    ./Documents/GitHub/leanne-website/src/components/templates/ServicePageTemplate.tsx [Server Component]
+    ./Documents/GitHub/leanne-website/src/app/huidverbetering/environ/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/GitHub/leanne-website/src/components/content/StepUpExplainer.tsx [Client Component SSR]
+    ./Documents/GitHub/leanne-website/src/components/templates/ServicePageTemplate.tsx [Client Component SSR]
+    ./Documents/GitHub/leanne-website/src/components/templates/ServicePageTemplate.tsx [Server Component]
+    ./Documents/GitHub/leanne-website/src/app/huidverbetering/environ/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/77146_next_dist_a83c7fe3._.js:3127
+[  641454ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/77146_next_dist_a83c7fe3._.js:2297

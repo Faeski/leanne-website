@@ -7,3 +7,4 @@ export { TrustBlock, type Certification } from "./TrustBlock";
 export { TreatmentCard, TreatmentCardGrid, type TreatmentCardData } from "./TreatmentCard";
 export { Testimonial, TestimonialGrid, type TestimonialData } from "./Testimonial";
 export { ProductRecommendation, type Product } from "./ProductRecommendation";
+export { StepUpExplainer } from "./StepUpExplainer";
