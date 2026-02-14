@@ -30,8 +30,8 @@ export const resend = {
 
 // Email configuration
 export const EMAIL_CONFIG = {
-  from: "Instituut Leanne <huidadvies@instituutleanne.be>",
-  replyTo: "info@instituutleanne.be",
+  from: "Instituut Leanne <huidadvies@leannepaulissen.be>",
+  replyTo: "info@leannepaulissen.be",
 } as const;
 
 // Generate unsubscribe URL

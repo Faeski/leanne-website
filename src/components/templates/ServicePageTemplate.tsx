@@ -13,6 +13,7 @@ import {
   type BeforeAfterImage,
   type FAQItem,
 } from "@/components/content";
+import { GravityStarsBackground } from "@/components/animate-ui/backgrounds/gravity-stars";
 import { SchemaScript, generateServiceSchema } from "@/lib/schema";
 
 export interface ServicePageContent {
@@ -88,12 +89,28 @@ export function ServicePageTemplate({ content }: ServicePageTemplateProps) {
         </Container>
       </Section>
 
-      {/* Process Timeline */}
-      <Section>
-        <Container>
-          <ProcessTimeline steps={content.processSteps} />
-        </Container>
-      </Section>
+      {/* Process Timeline with animated star background */}
+      <div className="relative overflow-hidden bg-neutral-50/50">
+        {/* Full-width animated star background */}
+        <GravityStarsBackground
+          className="absolute inset-0"
+          starsCount={150}
+          starsSize={2}
+          starsOpacity={0.6}
+          starsColor="#a8a29e"
+          glowIntensity={15}
+          mouseInfluence={200}
+          mouseGravity="attract"
+          gravityStrength={80}
+        />
+        <Section>
+          <Container>
+            <div className="pointer-events-none relative">
+              <ProcessTimeline steps={content.processSteps} />
+            </div>
+          </Container>
+        </Section>
+      </div>
 
       {/* Step-Up Explainer (Environ-specific) */}
       {content.showStepUpExplainer && <StepUpExplainer />}
