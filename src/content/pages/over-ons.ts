@@ -44,7 +44,7 @@ export const overOnsContent: OverOnsContent = {
     paragraphs: [
       "Instituut Leanne ontstond vanuit een simpele overtuiging: iedereen verdient een gezonde huid en de kennis om die te onderhouden. Geen verkooppraatjes of dure wondermiddelen, maar eerlijk advies gebaseerd op wetenschap.",
       "Met jarenlange ervaring in de huidverzorging en voortdurende bijscholing blijven we op de hoogte van de nieuwste ontwikkelingen. We werken uitsluitend met merken en apparatuur waarvan de werking wetenschappelijk is bewezen.",
-      "Ons instituut in Lanaken is ontworpen als een plek van rust. Hier neem je even afstand van de drukte en focus je volledig op jezelf. Met verwarmde stoelen, ambient muziek en volledige privacy maken we van elke behandeling een moment van me-time.",
+      "Ons instituut in Lanaken is ontworpen als een plek van rust. Hier neem je even afstand van de drukte en focus je volledig op jezelf. Met verwarmde stoelen, een zacht muziekje en een afgeschermde setting maken we van elke behandeling een moment dat helemaal om jou draait."
     ],
   },
 
@@ -111,7 +111,7 @@ export const overOnsContent: OverOnsContent = {
     {
       name: "Laser Safety Certificate",
       issuer: "NVLB",
-      year: 2019,
+      year: 2023,
     },
   ],
 

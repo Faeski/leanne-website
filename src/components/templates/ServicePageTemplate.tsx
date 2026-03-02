@@ -9,6 +9,7 @@ import {
   FAQAccordion,
   IntakeCTA,
   StepUpExplainer,
+  LaserCostCalculator,
   type ProcessStep,
   type BeforeAfterImage,
   type FAQItem,
@@ -47,6 +48,7 @@ export interface ServicePageContent {
 
   // Optional components
   showStepUpExplainer?: boolean;
+  showCostCalculator?: boolean;
 }
 
 interface ServicePageTemplateProps {
@@ -114,6 +116,15 @@ export function ServicePageTemplate({ content }: ServicePageTemplateProps) {
 
       {/* Step-Up Explainer (Environ-specific) */}
       {content.showStepUpExplainer && <StepUpExplainer />}
+
+      {/* Cost Calculator (Laser-specific) */}
+      {content.showCostCalculator && (
+        <Section background="cream">
+          <Container>
+            <LaserCostCalculator />
+          </Container>
+        </Section>
+      )}
 
       {/* Before/After Gallery */}
       <Section background="cream">

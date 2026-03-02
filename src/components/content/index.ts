@@ -8,3 +8,4 @@ export { TreatmentCard, TreatmentCardGrid, type TreatmentCardData } from "./Trea
 export { Testimonial, TestimonialGrid, type TestimonialData } from "./Testimonial";
 export { ProductRecommendation, type Product } from "./ProductRecommendation";
 export { StepUpExplainer } from "./StepUpExplainer";
+export { LaserCostCalculator } from "./LaserCostCalculator";
