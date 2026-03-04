@@ -1,7 +1,7 @@
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
-║                     TO-DO LIJST  —  INSTITUUT LEANNE                        ║
+║                     TO-DO LIJST  —  INSTITUUT LEANNE                         ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
@@ -95,46 +95,7 @@
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  3. CONTACTGEGEVENS  (staan nu als placeholder op de site!)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  □  Adres          → staat nu als "Adres komt hier"
-  □  Telefoonnummer → staat nu als "+32 XXX XX XX XX"
-  □  Instagram URL  → juiste link naar je profiel
-  □  Facebook URL   → juiste link naar je pagina
-  □  Google Maps    → klopt de huidige locatiepin?
-
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  4. PRIJSLIJST & BEHANDELINGEN
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  De meeste prijzen staan er al — even checken of alles nog klopt:
-
-  □  Laser — kleine zone €35+, medium €65+, groot €150+
-  □  Environ — vanaf €95, klopt dit nog?
-  □  Me-Line — exacte prijs ontbreekt nog (staat nu als "premium")
-  □  iCoone — exacte prijs ontbreekt nog (staat nu als "€€")
-  □  Zijn er pakketdeals die we moeten vermelden?
-  □  Klopt de Salonized boekingslink nog?
-
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  5. BRANDING & HUISSTIJL
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  De website gebruikt nu een warm roze/terracotta palette met teal
-  accenten, Playfair Display voor koppen en Inter voor tekst.
-  Hip maar volwassen — premium zonder overdreven te zijn.
-
-  □  Logo in hoge resolutie? (SVG of PNG zonder achtergrond)
-  □  Favicon? (het kleine icoontje in je browser-tab)
-  □  Match met fysieke materialen? (visitekaartjes, briefpapier)
-  □  Wil je een pamflet/flyer die past bij de website-stijl?
-
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  6. DOMEINSTRATEGIE
+  3. DOMEINSTRATEGIE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   Hier moeten we even een keuze maken.
@@ -145,10 +106,10 @@
   ├──────────────────────────┬──────────────────────────────────┤
   │  ✓ Voordelen             │  ✗ Nadelen                       │
   ├──────────────────────────┼──────────────────────────────────┤
-  │  Eén plek, simpel voor   │  Kan rommelig worden als de      │
+  │  Eén plek, simpel voor   │  Rommelig als de                 │
   │  klanten                 │  shop echt groot wordt           │
   │                          │                                  │
-  │  Beter voor Google (alle │  Technisch iets complexer        │
+  │  Beter voor Google (alle │  Technisch complexer             │
   │  bezoekers op één site)  │  om te bouwen                    │
   │                          │                                  │
   │  Één adres om te         │                                  │
@@ -163,8 +124,8 @@
   ├──────────────────────────┬──────────────────────────────────┤
   │  ✓ Voordelen             │  ✗ Nadelen                       │
   ├──────────────────────────┼──────────────────────────────────┤
-  │  Salon en shop staan     │  Twee sites onderhouden =        │
-  │  los van elkaar          │  meer werk                       │
+  │  Salon en shop staan     │  Extra kosten (2e domein,        │
+  │  los van elkaar          │  eventueel 2e hosting)           │
   │                          │                                  │
   │  Shop kan eigen platform │  Klanten moeten twee adressen    │
   │  hebben (bv. Shopify)    │  onthouden                       │
@@ -172,55 +133,11 @@
   │  Makkelijker als je de   │  Minder sterk voor Google        │
   │  shop later wil stoppen  │  (verkeer verdeeld)              │
   │  of verkopen             │                                  │
-  │                          │  Extra kosten (2e domein,        │
-  │                          │  eventueel 2e hosting)           │
+  │                          │                                  │
+  │                          │                                  │
   └──────────────────────────┴──────────────────────────────────┘
-
-  ★  ADVIES: Ga voor Optie A. Voor een salon die wat producten
-     verkoopt is alles op één site verreweg het simpelst. Je
-     kunt altijd later nog splitsen als het echt nodig is.
 
   □  Welk domein als hoofddomein?
        → leannepaulissen.be  (persoonlijker, jij als merk)
-       → instituutleanne.be  (professioneler, los van je naam —
-                              beter als je ooit zou verkopen)
   □  Het andere domein laten doorverwijzen naar het hoofddomein
   □  Webshop als onderdeel van de hoofdsite of toch apart?
-
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  7. WEBSHOP
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  □  Welke producten verkoop je online? (Environ, Me-Line, andere?)
-  □  Productfoto's — heb je die van de merken, of moeten we zelf
-     foto's maken?
-  □  Prijzen per product
-  □  Verzendkosten — wat reken je? Gratis boven een bepaald bedrag?
-  □  Betaalmethoden — Bancontact, iDEAL (voor NL-klanten), creditcard?
-  □  Retourbeleid & algemene voorwaarden voor de webshop
-
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  PRIORITEITEN — WAT EERST?
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  ┌────┬──────────────────────────────────────┬─────────────────┐
-  │ #  │ Wat                                  │ Urgentie        │
-  ├────┼──────────────────────────────────────┼─────────────────┤
-  │  1 │ Contactgegevens invullen             │ NU — blocker!   │
-  │  2 │ Domein-keuze maken                   │ Hoog            │
-  │  3 │ Prijzen checken & aanvullen          │ Hoog            │
-  │  4 │ Portretfoto's Leanne & Sharon        │ Hoog            │
-  │  5 │ Sfeerfoto's salon                    │ Hoog            │
-  │  6 │ Logo in hoge resolutie               │ Medium          │
-  │  7 │ Certificaten scannen                 │ Medium          │
-  │  8 │ Behandelfoto's                       │ Medium          │
-  │  9 │ Before/after foto's                  │ Medium (groeit) │
-  │ 10 │ Webshop details                      │ Later           │
-  └────┴──────────────────────────────────────┴─────────────────┘
-
-
-══════════════════════════════════════════════════════════════════════════════
-  Vragen? Gooi ze gerust door — we lossen het samen op!
-══════════════════════════════════════════════════════════════════════════════
