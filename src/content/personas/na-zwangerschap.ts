@@ -60,7 +60,7 @@ export const naZwangerschapContent: PersonaPageContent = {
   // Testimonial
   testimonial: {
     quote:
-      "Na mijn tweede kind voelde ik me niet meer lekker in mijn vel. Leanne heeft me geholpen met een realistisch plan. Na 10 iCoone behandelingen is mijn buik zoveel strakker. Eindelijk durf ik weer een bikini aan!",
+      "Na mijn tweede kind had ik het gevoel dat ik mezelf een beetje kwijt was. Leanne hielp me met een haalbaar plan. Na 10 iCoone-behandelingen voelt mijn buik opnieuw steviger.",
     author: "Michelle",
     role: "Moeder van twee",
     treatment: "iCoone behandelingen",
