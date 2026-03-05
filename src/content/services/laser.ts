@@ -79,6 +79,9 @@ export const laserContent: ServicePageContent = {
     },
   ],
 
+  // Optional components
+  showCostCalculator: true,
+
   // Schema data
   schemaData: {
     name: "Laserontharing",
