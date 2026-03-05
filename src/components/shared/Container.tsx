@@ -4,9 +4,9 @@ import { cn } from "@/lib/utils";
 import { ContainerProps } from "@/types";
 
 const sizeClasses = {
-  default: "max-w-7xl",
-  narrow: "max-w-4xl",
-  wide: "max-w-screen-2xl",
+  default: "max-w-[1300px]",
+  narrow: "max-w-[900px]",
+  wide: "max-w-[1400px]",
 };
 
 export function Container({
@@ -17,7 +17,7 @@ export function Container({
   return (
     <div
       className={cn(
-        "mx-auto w-full px-container lg:px-container-lg",
+        "mx-auto w-full px-container md:px-container-lg",
         sizeClasses[size],
         className
       )}

@@ -9,3 +9,4 @@ export { Testimonial, TestimonialGrid, type TestimonialData } from "./Testimonia
 export { ProductRecommendation, type Product } from "./ProductRecommendation";
 export { StepUpExplainer } from "./StepUpExplainer";
 export { LaserCostCalculator } from "./LaserCostCalculator";
+export { LaserHero } from "./LaserHero";

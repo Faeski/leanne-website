@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { ServicePageTemplate } from "@/components/templates";
 import { laserContent } from "@/content";
+import { LaserHero } from "@/components/content";
 
 export const metadata: Metadata = {
   title: "Laserontharing | Instituut Leanne",
@@ -9,5 +10,19 @@ export const metadata: Metadata = {
 };
 
 export default function LaserPage() {
-  return <ServicePageTemplate content={laserContent} />;
+  return (
+    <ServicePageTemplate
+      content={{
+        ...laserContent,
+        heroComponent: (
+          <LaserHero
+            title={laserContent.title}
+            subtitle={laserContent.subtitle}
+            hairSrc="/images/hero_laser_hair.png"
+            nohairSrc="/images/hero_laser_nohair.png"
+          />
+        ),
+      }}
+    />
+  );
 }

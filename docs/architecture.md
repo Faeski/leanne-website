@@ -61,7 +61,7 @@ src/
 │
 ├── components/
 │   ├── layout/                  # Global layout components
-│   │   ├── Navigation.tsx       # Sticky header with mobile menu
+│   │   ├── Navigation.tsx       # Hide-on-scroll-down sticky header
 │   │   ├── MobileMenu.tsx       # Full-screen mobile overlay
 │   │   ├── Footer.tsx           # Site footer
 │   │   └── BookingCTA.tsx       # Floating/inline booking button
@@ -79,6 +79,8 @@ src/
 │   │   ├── AEOBlock.tsx         # AI-optimized answer blocks
 │   │   ├── FAQAccordion.tsx     # FAQ with Schema.org
 │   │   ├── ProcessTimeline.tsx  # Before/During/After steps
+│   │   ├── LaserHero.tsx        # WebGL shader hero with laser reveal effect
+│   │   ├── LaserCostCalculator.tsx # Stacking-scroll cost comparison
 │   │   ├── TreatmentGrid.tsx    # Service preview cards
 │   │   └── ...                  # Other content blocks
 │   │
@@ -161,7 +163,7 @@ Service pages include AEO blocks at the top:
 
 ### Colors (CSS Custom Properties)
 ```css
---color-primary-*   /* Warm terracotta tones */
+--color-primary-*   /* Warm burgundy tones — primary-500: #7c4334 (WCAG AAA on white) */
 --color-neutral-*   /* Warm grays */
 --color-accent-*    /* Teal CTAs */
 ```
@@ -173,7 +175,13 @@ Service pages include AEO blocks at the top:
 
 ### Spacing
 - Section padding: 4rem (mobile) / 6rem (desktop)
-- Container padding: 1.5rem (mobile) / 2rem (desktop)
+- Container padding: 1.25rem / 20px (mobile) / 1.875rem / 30px (tablet+, breakpoint at md/768px)
+
+### Layout Widths (matches squareblack.com pattern)
+- Default container: 1300px (`max-w-[1300px]`)
+- Narrow container: 900px (`max-w-[900px]`)
+- Wide container (nav/footer): 1400px (`max-w-[1400px]`)
+- Padding switches from 20px → 30px at `md:` (768px) breakpoint
 
 ## Environment Variables
 

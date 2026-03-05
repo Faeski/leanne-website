@@ -8,8 +8,8 @@
   --color-primary-200: #f3dcd2;
   --color-primary-300: #e9c4b3;
   --color-primary-400: #dca58c;
-  --color-primary-500: #c9826a;
-  --color-primary-600: #b56b52;
+  --color-primary-500: #7c4334;
+  --color-primary-600: #6a3529;
   --color-primary-700: #975746;
   --color-primary-800: #7c493c;
   --color-primary-900: #674035;
@@ -34,19 +34,28 @@
   --font-family-display: var(--font-display), serif;
   --font-family-body: var(--font-body), sans-serif;
 
-  /* Font sizes */
-  --font-size-display-lg: 2.5rem;
-  --font-size-display-md: 2rem;
-  --font-size-display-sm: 1.5rem;
-  --font-size-body-lg: 1.125rem;
-  --font-size-body-md: 1rem;
-  --font-size-body-sm: 0.875rem;
+  /* Font sizes — desktop (major third scale, 1.25 ratio) */
+  --text-display-lg: 3.5rem;
+  --text-display-md: 2.5rem;
+  --text-display-sm: 1.75rem;
+  --text-body-lg: 1.125rem;
+  --text-body-md: 1rem;
+  --text-body-sm: 0.875rem;
 
   /* Custom spacing */
   --spacing-section: 4rem;
   --spacing-section-lg: 6rem;
-  --spacing-container: 1.5rem;
-  --spacing-container-lg: 2rem;
+  --spacing-container: 1.25rem;
+  --spacing-container-lg: 1.875rem;
+}
+
+/* Responsive type scale — mobile sizes */
+@media (max-width: 768px) {
+  :root {
+    --text-display-lg: 2.25rem;
+    --text-display-md: 1.75rem;
+    --text-display-sm: 1.375rem;
+  }
 }
 
 :root {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -8,14 +8,38 @@ import { NAVIGATION, ROUTES } from "@/lib/constants";
 import { MobileMenu } from "./MobileMenu";
 import { BookingCTA } from "./BookingCTA";
 
+const SCROLL_THRESHOLD = 10;
+
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      const delta = currentY - lastScrollY.current;
+
+      if (Math.abs(delta) < SCROLL_THRESHOLD) return;
+
+      setHidden(delta > 0 && currentY > 60);
+      lastScrollY.current = currentY;
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-neutral-200 bg-white/95 backdrop-blur-sm">
-        <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-container lg:h-20 lg:px-container-lg">
+      <header
+        className={cn(
+          "sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm transition-transform duration-300",
+          hidden && "-translate-y-full"
+        )}
+      >
+        <nav className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-container lg:h-20 md:px-container-lg">
           {/* Logo */}
           <Link
             href={ROUTES.HOME}
