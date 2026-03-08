@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+
 interface AEOBlockProps {
   /** 40-60 word direct answer for AI search engines */
   answer: string;
@@ -10,23 +12,49 @@ interface AEOBlockProps {
 /**
  * AEO (Answer Engine Optimization) Block
  * Designed to provide direct answers for AI search engines like ChatGPT, Perplexity, etc.
- * Placed at top of service pages for maximum visibility to crawlers.
+ * Full-width section with primary brand background and slide-up animation on scroll.
  */
 export function AEOBlock({ answer, citation }: AEOBlockProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div
-      className="rounded-lg border border-neutral-200 bg-neutral-50 p-6"
+    <section
+      ref={ref}
+      className="bg-primary-600 py-16 lg:py-20"
       role="region"
       aria-label="Samenvatting"
     >
-      <p className="text-lg leading-relaxed text-neutral-700">
-        {answer}
-      </p>
-      {citation && (
-        <p className="mt-3 text-sm text-neutral-500">
-          — {citation}
+      <div
+        className={`mx-auto max-w-3xl px-6 text-center transition-all duration-700 ease-out ${
+          visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+        }`}
+      >
+        <p className="text-lg leading-relaxed text-white/90">
+          {answer}
         </p>
-      )}
-    </div>
+        {citation && (
+          <p className="mt-4 text-sm text-white/60">
+            — {citation}
+          </p>
+        )}
+      </div>
+    </section>
   );
 }

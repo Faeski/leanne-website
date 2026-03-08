@@ -1,0 +1,143 @@
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║                     TO-DO LIJST  —  INSTITUUT LEANNE                         ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+  Hé Leanne! Hieronder alles wat we nog nodig hebben om de website (en
+  webshop) helemaal klaar te maken. Zo concreet mogelijk, zodat je exact
+  weet wat je moet regelen — en in welke volgorde.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1. FOTO'S
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  SALON & SFEER
+  ─────────────
+  □  De behandelruimte — mooi opgemaakt, verwarmde stoel met dekentje,
+     zachte verlichting. Doel: laten zien dat het echte "me-time" is,
+     geen klinisch gedoe.
+
+  □  De wachtruimte / ontvangst — gezellig, warm, uitnodigend.
+
+  □  Detail-shots — producten mooi uitgestald, gevouwen handdoeken,
+     een kopje thee, texturen. Kleine dingen die sfeer geven.
+
+  □  De buitenkant / gevel — zodat mensen het herkennen als ze komen.
+     Eventueel met de parking zichtbaar.
+
+
+  BEHANDELINGEN IN ACTIE
+  ──────────────────────
+  □  Environ behandeling — Leanne aan het werk bij een klant (gezicht,
+     apparatuur zichtbaar). Klant relaxed, ogen dicht.
+
+  □  iCoone behandeling — het apparaat in actie op een lichaamsdeel.
+     Laat zien dat het er comfortabel uitziet, niet eng.
+
+  □  Laserontharing — Sharon aan het werk met de diode laser.
+     Professioneel maar niet klinisch.
+
+  □  Me-Line behandeling — close-up van de professionele peeling,
+     handen aan het werk.
+
+  □  Huidanalyse moment — Leanne die naar de huid kijkt en advies
+     geeft, een persoonlijk gesprek.
+
+
+  BEFORE & AFTER
+  ──────────────
+  □  Environ resultaten — huidverbetering, rimpels, textuur
+     (minimaal 3–4 voorbeelden)
+
+  □  Me-Line resultaten — pigmentvlekken voor/na
+     (minimaal 2–3 voorbeelden)
+
+  □  iCoone resultaten — huidversteviging, cellulite voor/na
+
+  □  Laserontharing resultaten — voor/na per zone
+
+  ✎  TIP: Vraag toestemming aan klanten en maak de foto's met dezelfde
+     belichting en achtergrond. Telefoon kan, maar consistent licht
+     maakt een wereld van verschil.
+
+
+  PORTRETFOTO'S
+  ─────────────
+  □  Leanne — professioneel maar warm portret. Lachend, benaderbaar.
+     Voor de "Over Ons" pagina.
+
+  □  Sharon — zelfde stijl als Leanne. Professioneel, vriendelijk.
+
+  □  Samen — eventueel een teamfoto voor de "Over Ons" pagina.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  2. CERTIFICATEN & OFFICIËLE DOCUMENTEN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  We tonen deze op de website als vertrouwensbewijs. Een scan of
+  foto is prima — het hoeft niet perfect.
+
+  ┌────────────────────────────────┬─────────────────────┬──────┐
+  │ Certificaat                    │ Uitgever            │ Jaar │
+  ├────────────────────────────────┼─────────────────────┼──────┤
+  │ □  Environ Gold Salon          │ Environ Skin Care   │ 2020 │
+  │ □  Me-Line Gecertificeerd      │ Me-Line Professional│ 2021 │
+  │ □  iCoone Treatment Provider   │ iCoone              │ 2022 │
+  │ □  NVLB Laser Safety Cert.     │ NVLB                │ 2019 │
+  └────────────────────────────────┴─────────────────────┴──────┘
+
+  Heb je nog andere diploma's of certificaten? Alles wat
+  vertrouwen wekt is welkom!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  3. DOMEINSTRATEGIE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Hier moeten we even een keuze maken.
+
+  ┌─────────────────────────────────────────────────────────────┐
+  │  OPTIE A — Alles onder één domein                           │
+  │  leannepaulissen.be  voor salon ÉN webshop                  │
+  ├──────────────────────────┬──────────────────────────────────┤
+  │  ✓ Voordelen             │  ✗ Nadelen                       │
+  ├──────────────────────────┼──────────────────────────────────┤
+  │  Eén plek, simpel voor   │  Rommelig als de                 │
+  │  klanten                 │  shop echt groot wordt           │
+  │                          │                                  │
+  │  Beter voor Google (alle │  Technisch complexer             │
+  │  bezoekers op één site)  │  om te bouwen                    │
+  │                          │                                  │
+  │  Één adres om te         │                                  │
+  │  onthouden               │                                  │
+  │                          │                                  │
+  │  Goedkoper (1 domein)    │                                  │
+  └──────────────────────────┴──────────────────────────────────┘
+
+  ┌─────────────────────────────────────────────────────────────┐
+  │  OPTIE B — Apart domein voor de webshop                     │
+  │  leannepaulissen.be = salon  /  leanneshop.be = webshop     │
+  ├──────────────────────────┬──────────────────────────────────┤
+  │  ✓ Voordelen             │  ✗ Nadelen                       │
+  ├──────────────────────────┼──────────────────────────────────┤
+  │  Salon en shop staan     │  Extra kosten (2e domein,        │
+  │  los van elkaar          │  eventueel 2e hosting)           │
+  │                          │                                  │
+  │  Shop kan eigen platform │  Klanten moeten twee adressen    │
+  │  hebben (bv. Shopify)    │  onthouden                       │
+  │                          │                                  │
+  │  Makkelijker als je de   │  Minder sterk voor Google        │
+  │  shop later wil stoppen  │  (verkeer verdeeld)              │
+  │  of verkopen             │                                  │
+  │                          │                                  │
+  │                          │                                  │
+  └──────────────────────────┴──────────────────────────────────┘
+
+  □  Welk domein als hoofddomein?
+       → leannepaulissen.be  (persoonlijker, jij als merk)
+  □  Het andere domein laten doorverwijzen naar het hoofddomein
+  □  Webshop als onderdeel van de hoofdsite of toch apart?
